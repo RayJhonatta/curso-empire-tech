@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section > table {
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        function adicionarUsuario() {
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+
+            const sexMasculine = document.getElementById("i-masculine").checked;
+            const sexFeminine = document.getElementById("i-feminine").checked;
+
+            const city = document.getElementById("city").value;
+            const states = document.getElementById("states").value;
+            const email = document.getElementById("email").value;
+
+            if (!name || !age || (!sexMasculine && !sexFeminine) || !email || !city || !states) {
+                alert("Por favor, preencha os campos!!");
+                return;
+            }
+
+            // const city = document.getElementById("city").options;
+            // const states = document.getElementById("states").options;
+            
+            // let selectedCity = ''; 
+            // for (const option of city) {
+            //     if (option.selected) {
+            //         selectedCity = option.value;
+            //         break;
+            //     }
+            // }
+
+            // let i = 0;
+            // while(!selectedCity && i < city.length) {
+            //     const option = city[i];
+            //     if (option.selected) {
+            //         selectedCity = option.value;
+            //         break;
+            //     }
+
+            //     i++;
+            // }
+
+            // for (const key in Object.keys(city)) {
+            //     const option = city[key];
+            //     if (option.selected) {
+            //         selectedCity = option.value;
+            //         break;
+            //     }
+            
+            // }
+
+            // for (let i = 0; i < city.length; i++) {
+            //     const option = city[i];
+            //     if (option.selected) {
+            //         selectedCity = option.value;
+            //         break;
+            //     }
+            // }
+
+            // let i = 0;
+            // do {
+            //     const option = city[i];
+            //     if (option.selected) {
+            //         selectedCity = option.value;
+            //         break;
+            //     }
+
+            //     i++;
+            // } while (!selectedCity && i < city.length);
+
+            // let selectedState = ''; 
+            // for (const option of states) {
+            //     if (option.selected) {
+            //         selectedState = option.value;
+            //         break;
+            //     }   
+            // }
+
+
+            let sex = sexMasculine ? "Masculino" : "Feminino";
+
+            const tabela = document.getElementById("tabelaUsuario");
+            const novaLinha = tabela.insertRow();
+
+            const pegarNome = novaLinha.insertCell(0);
+            const pegarIdade = novaLinha.insertCell(1);
+            const pegarSexo = novaLinha.insertCell(2);
+            const pegarCidade = novaLinha.insertCell(3);
+            const pegarEstado = novaLinha.insertCell(4);
+            const pegarEmail = novaLinha.insertCell(5);
+            
+            pegarNome.innerText = name;
+            pegarIdade.innerText = age;
+            pegarSexo.innerText = sex;
+            pegarCidade.innerText = city;
+            pegarEstado.innerText = states;
+            pegarEmail.innerText = email;
+
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("i-masculine").checked = false;
+            document.getElementById("i-feminine").checked = false;
+            document.getElementById("city").value = "";
+            document.getElementById("states").value = "";
+            document.getElementById("email").value = "";
+        } 
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Exercício Aula-5</h1>
+        <section>
+            <!-- <form> -->
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="age">Idade:</label>
+                <input type="number" name="age" id="age">
+
+                <label for="sex">Sexo:</label>
+                <label for="i-masculine">Masculino</label>
+                <input type="radio" name="sex" id="i-masculine">
+                <label for="i-feminine">Feminino</label>
+                <input type="radio" name="sex" id="i-feminine">
+
+                <label for="city">Cidade:</label>
+                    <select name="city" id="city">
+                        <option value="Recife">Recife</option>
+                        <option value="Nova York">Nova York</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Houston">Houston</option>
+                        <option value="Maceió">Maceió</option>
+                    </select>
+                <label for="states">Estados:</label>
+                    <select name="states" id="states">
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Nova York">Nova York</option>
+                        <option value="Califórnia">Califórnia</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Alagoas">Alagoas</option>
+                    </select>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+
+                <button onclick="adicionarUsuario()">Enviar</button>
+            <!-- </form> -->
+        </section>
+
+        <section>
+            <table id="tabelaUsuario">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sexo</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>17 anos</td>
+                        <td>Masculino</td>
+                        <td>Recife</td>
+                        <td>Pernambuco</td>
+                        <td>joaosilva@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Larissa Mendes</td>
+                        <td>25 anos</td>
+                        <td>Feminino</td>
+                        <td>Maceió</td>
+                        <td>Alagoas</td>
+                        <td>larissa.mendes25@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro Henrique Souza</td>
+                        <td>37 anos</td>
+                        <td>Masculino</td>
+                        <td>Houston</td>
+                        <td>Texas</td>
+                        <td>pedrohsouza@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

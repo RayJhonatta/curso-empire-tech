@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: For IN</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre For IN</h1>
+
+    <script>
+
+        document.writeln("Questão 51:")
+
+        let pessoa = {
+            nome: "Lucas",
+            idade: 25,
+            cidade: "São Paulo"
+        };
+
+        for (let chave in pessoa) {
+            document.writeln(chave);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 52:")
+
+        let produto = {
+            nome: "Notebook",
+            preco: 3500,
+            marca: "Dell",
+            garantia: "1 ano"
+        };
+
+        for (let chave in produto) {
+            document.writeln(`${chave}: ${produto[chave]}`);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 53:")
+
+        let carro = {
+           marca: "Toyota",
+           cor: "preto",
+           ano: 2021
+        };
+
+        let contador = 0;
+
+        for(let chave in carro) {
+            contador++;
+        }
+
+        document.writeln("Quantidade de propriedades: ", contador);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 54:")
+
+        let aluno = {
+            nome: "Vinicius",
+            idade: 17,
+            serie: "1B",
+            escola: "Contato"
+        }; 
+
+        for (let chave in aluno) {
+            document.writeln(`${chave}: ${aluno[chave]} <br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 55:")
+
+        let celular = {
+            marca: "Iphone",
+            modelo: "15 Pro Max",
+            cor: "branco",
+            preco: 3.000
+        };
+
+        for (let chave in celular) {
+            if (chave === "cor") {
+                document.writeln("A propriedade 'Cor' existe");  
+            }
+        } 
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 56:")
+
+        let filme = {
+            titulo: "Vingadores: Ultimato",
+            diretor: "Anthony e Joe Russo",
+            ano: 2019,
+            duracao: "3h 2min"
+        };
+
+        let copiaFilme = {};
+
+        for (let chave in filme) {
+            copiaFilme[chave] = filme[chave];
+
+            document.writeln(`${chave}: ${copiaFilme[chave]}<br>`);
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 57:")
+
+        let personagem = {
+          nome: "Marcos",
+          idade: 33,
+          tipo: true,
+          habilidade: ["Jogador", "Lutador"]
+        };
+
+        for (let chave in personagem) {
+            document.writeln(`A propriedade ${chave} é do tipo: ${typeof personagem[chave]} <br>`)
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 58:")
+
+        let jogador = {
+            nome: "Neymar",
+            idade: 33,
+            posicao: "Ponta-Esquerda",
+            clube: "Santos",
+            ativo: true
+        };
+
+        for (let chave in jogador) {
+            if (typeof jogador[chave] === "string") {
+                document.writeln(`A propriedade ${chave} tem valor string: ${jogador[chave]} <br>`)
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 59:")
+
+        let supermercado = {
+            fruta: "Maça",
+            verdura: "Alface",
+            biscoito: "Treloso",
+            pipoca: "Doritos",
+            bebida: null,
+        }
+
+        for (let chave in supermercado) {
+            if (supermercado[chave] === null) {
+                document.writeln(`A propriedade ${chave} é uma propriedade: null <br>`);
+            }
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 60:")
+
+        let livro = {
+            titulo: "Harry Potter",
+            autor: "J.K. Rowling",
+            editor: "Rocco",
+            idioma: "Português",
+            genero: "Fantasia",
+            preco: "R$ 39,90"
+        }
+
+        for(let chave in livro) {
+            document.write(` ${chave}: ${livro[chave]} <br>`);
+        }
+    </script>
+</body>
+</html>

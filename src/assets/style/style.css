@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body > .section-1 > #saiba-mais {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.section-2 > #enviar {
+    background-color: rgba(211, 211, 211, 0.593);
+    border-radius: 10px;
+}
+
+div > .number {
+    width: 30px;
+}
+

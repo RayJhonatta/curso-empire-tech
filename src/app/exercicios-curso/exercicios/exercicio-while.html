@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: While</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre While</h1>
+
+    <script>
+        document.writeln("Questão 61:")
+
+        let i = 0;
+        while (i <= 10) {
+            document.writeln(i);
+            i++;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 62:")
+
+        let soma = 0;
+        let numero = 1;
+
+        while (numero <= 100) {
+          soma += numero;
+          numero++; 
+          document.writeln(soma);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 63:")
+
+        let number = 3;
+
+        while (number <= 30) { 
+           document.writeln(`${number} <br>`);
+           number += 3;
+        }
+
+        document.writeln("<br>");
+
+        document.writeln("Questão 64:")
+
+        let regressivo = 20;
+
+        while (regressivo >= 0) {
+            document.writeln(regressivo);
+            regressivo--;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 65:")
+
+        let numerosPares = 1;
+        
+        while (numerosPares <= 20) {
+            if (numerosPares % 2 == 0) {
+                document.writeln(numerosPares);
+            }
+            numerosPares++;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 66:")
+
+        let n = 5;
+        let fatorial = 1;
+        let contador = 1;
+
+        while (contador <= n) {
+            fatorial *= contador;
+            contador++;
+        }
+
+        document.writeln(`O fatorial de ${n} é ${fatorial}`);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 67:")
+
+        let pessoas = ["Vinicius", "Pedro", "Gabriel", "Luis", "Marcelo"];
+        let a = 0;
+        
+        while (a < pessoas.length) {
+            document.writeln(pessoas[a]);
+            a++;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 68:")
+
+
+        let numeros = [4, 1, 9, 3, 7, 10];
+        let b = 0;
+
+        while (b < numeros.length && numeros[b] !== 7) {
+            b++;
+        }
+
+        document.writeln(b < numeros.length ? "Contém o número 7" : "Não contém o número 7.");
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 69:")
+
+        let valor = 100;
+
+        while (valor >= 0) {
+            document.writeln(valor);
+            valor -= 10;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 70:")
+
+        let x = 1; 
+        let divisiveisPor4 = 0; 
+
+        while (x <= 50) {
+            if (x % 4 === 0) {
+                divisiveisPor4++; 
+        }
+            x++; 
+        }
+
+        document.writeln("Quantidade de números divisíveis por 4: " + divisiveisPor4);
+
+    </script>
+</body>
+</html>

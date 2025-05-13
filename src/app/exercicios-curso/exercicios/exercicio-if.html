@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: IF</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre IF</h1>
+    <script>
+     let value = 3;  
+       document.writeln(`Questão 11: `, value > 0 ? "Esse número é positivo" : "Esse número é negativo");
+       document.writeln("<br><br>");
+ 
+     let age = 16;
+        document.writeln(`Questão 12: `, age >= 16 ? "Pode votar!!" : "Não pode votar!!"); 
+        document.writeln("<br><br>");
+
+     let value2 = 102;
+        document.writeln(`Questão 13: `,value2 > 100 ? `O número ${value2} é maior` : `O número ${value2} é menor`);
+        document.writeln("<br><br>");
+        
+     let string = 'admin';
+        document.writeln(`Questão 14: `,string == 'admin' ? "true" : "false");
+        document.writeln("<br><br>");
+
+     let notes = 8.5;
+        document.writeln(`Questão 15: `,notes >= 7 ? `Você está aprovado!!!` : `Você está reprovado!!!`);
+        document.writeln("<br><br>");   
+
+     let name = "Ray";
+        if(name !== null) {
+            document.writeln("Questão 16:");
+            document.writeln("Essa váriavel não é nula!!");
+            document.writeln("<br><br>"); 
+        }
+
+     let number = 4;
+        if (number % 2 == 0) {
+            document.writeln("Questão 17:");
+            document.writeln(`O número ${number} é par.`);
+            document.writeln("<br><br>"); 
+        } else {
+            document.writeln(`O número ${number} é impar.`);
+            document.writeln("<br><br>"); 
+        }
+
+     let ages = 18;
+        if (ages >= 18) {
+            document.writeln("Questão 18:"); 
+            document.writeln("Você é maior de idade");
+            document.writeln("<br><br>"); 
+        } else {
+            document.writeln("Você não é maior de idade");
+            document.writeln("<br><br>"); 
+        }
+
+        let idade = 18;
+        let temCarteira = true;
+
+        if(idade >= 18) {
+            document.writeln("Questão 19:"); 
+            if(!temCarteira) {
+               document.writeln("Você pode dirigir!!");
+               document.writeln("<br><br>"); 
+            } else {
+                document.writeln("Você precisa tirar uma carteira de motorista.");
+                document.writeln("<br><br>"); 
+            }
+        }
+
+     let a = 10;
+     let b = 10;
+       document.writeln("Questão 20:"); 
+       document.writeln(a == b ? "As duas váriaveis são iguais" : "As duas váriaveis não são iguais");
+    </script>
+</body>
+</html>

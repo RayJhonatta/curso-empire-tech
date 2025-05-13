@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: For OF</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre For OF</h1>
+
+    <script>
+        document.writeln("Questão 41:")
+
+        const frutas = ['maça', 'laranja', 'banana'];
+
+        for (const fruta of frutas) {
+            document.writeln(fruta);
+        }
+
+        document.writeln("<br><br>")
+
+        document.writeln("Questão 42:")
+
+        const numeros = [1, 2, 3, 4];
+        let soma = 0;
+
+        for (const numero of numeros) {
+            soma += numero;
+        }
+
+        document.writeln(soma);
+
+        document.writeln("<br><br>")
+
+        document.writeln("Questão 43:")
+
+        const nomes = ['Paulo', 'Bernando', 'Luiz', 'Lucas'];
+
+        for (const nome of nomes) {
+            document.writeln(`<br> ${nome}`);
+        }
+
+        document.writeln("<br><br>")
+
+        document.writeln("Questão 44:")
+
+        const notas = [10.0, 9.5, 8.0, 7.5, 6.0, 4.5, 2.0];
+        
+        for (const nota of notas) {
+            if (nota < 6) {
+                document.writeln(`A nota ${nota} é abaixo de 6. <br>`);
+            }
+        }
+ 
+        document.writeln("<br>")
+
+        document.writeln("Questão 45:")
+
+        const names = ['Ana', 'Felipe', 'Bruno', 'Arthur', 'Carlos'];
+
+        for (const name of names) {
+            if (name.startsWith('A')) {
+                document.writeln(`${name} <br>`); 
+            }
+        }
+
+        document.writeln("<br>")
+
+        document.writeln("Questão 46:") 
+
+        let listas = ['Pedro', 'Maria', 'Gustavo', 'Bernardo', 'Lucas'];
+
+        for (let lista of listas) {
+            if (lista.length > 5) {
+                document.writeln(`O nome ${lista} tem mais de 5 letras`);
+            } 
+        }
+
+        document.writeln("<br><br>");
+        
+        document.writeln("Questão 47:") 
+
+        let listaPreços = ['Celular: R$ 2.100', ' Camisa: R$ 1.200', ' Calça: R$ 1.500', ' Sapato: R$ 2.100'];
+
+        for (listaPreço of listaPreços) {
+            document.writeln(listaPreços);
+            break;
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 48:")
+
+        let listaPares = [2, 5, 7, 10, 12, 3, 8];
+        let somas = 0;
+
+        for (let listaPar of listaPares) {
+            if (listaPar % 2 === 0) {
+                somas += listaPar;
+            }
+        }
+
+        document.writeln("Soma dos números pares: ", somas);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 49:")
+
+        let palavra = "Programação";
+
+        for (let letra of palavra) {
+            document.writeln(letra);
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 50:")
+        
+        let objetos = ['Caneta', 'Garrafa', 'Faca', 'Copo', 'Controle'];
+
+        for (let objeto of objetos) {
+            document.writeln(objetos);
+            break;
+        }
+
+        document.writeln("<br><br>");
+
+    </script>
+</body>
+</html>

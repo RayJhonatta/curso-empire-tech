@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: Do-While</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre Do-While</h1>
+
+    <script>
+        document.writeln("Questão 71:")
+
+        let numero = 1;
+
+        do {
+            document.writeln(numero);
+            numero++;
+        } while (numero <= 10);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 72:")
+
+        let number = 10;
+
+        do {
+            document.writeln(number);
+            number--;
+        } while (number >= 1);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 73:")
+
+        let i = 2;
+
+        do {
+           document.writeln(i)
+           i += 2;
+        } while (i <= 20);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 74:")
+
+        let numeroAleatorio;
+
+        do {
+            numeroAleatorio = Math.random();
+            document.writeln(numeroAleatorio);
+        } while (numeroAleatorio >= 0.5);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 75:")
+
+        let array = ["Mateus", 2, "Camisa", "Bola"];
+        let x = 0;
+
+        do {
+            document.writeln(array[x]);
+            x++;
+        } while (x < array.length);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 76:")
+
+        let senhaCorreta = "1234"; 
+        let tentativas = 0; 
+        let senhaInformada;
+        let maxTentativas = 3;  
+
+        do {
+            senhaInformada = prompt("Digite a senha:"); 
+            tentativas++; 
+
+        if (senhaInformada === senhaCorreta) {
+            document.writeln("Senha correta!!!");
+            break; 
+        } else {
+            document.writeln("Senha incorreta!!");
+        }
+
+        } while (tentativas < maxTentativas); 
+
+        if (tentativas === maxTentativas && senhaInformada !== senhaCorreta) {
+            document.writeln("Número máximo de tentativas atingido!!");
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 77:")
+
+        let senha = "1234";
+        let entradaSenha;
+
+        do {
+            entradaSenha = prompt("Digite sua senha");
+        } while (entradaSenha !== senha) {
+            document.writeln("Senha Correta!!");
+        }
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 78:")
+
+        let a = 4;
+        
+        do {
+            document.writeln(a);
+            a += 4;
+        } while (a <= 40);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 79:")
+
+        let b = 100;
+
+        do {
+            document.writeln(b);
+            b -= 10;
+        } while (b >= 50);
+
+        document.writeln("<br><br>");
+
+        document.writeln("Questão 80:")
+
+        let valor;
+
+        do {
+           valor = Math.floor(Math.random() * 6) + 1;
+           document.writeln(valor);
+        } while (valor !== 6);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Desenvolvimento Web: Switch</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício sobre Switch</h1>
+
+    <script>
+        let day = 2;
+
+        document.writeln("Questão 21:"); 
+
+        switch (day) {
+            case 1: document.writeln("Domingo"); 
+            document.writeln("<br><br>");
+            break;
+    
+            case 2: document.writeln("Segunda-feira"); 
+            document.writeln("<br><br>");
+            break;
+
+            case 3: document.writeln("Terça-feira"); 
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outro dia"); 
+            document.writeln("<br><br>");
+            break;
+        }
+
+        let month = 4;
+
+        document.writeln("Questão 22:"); 
+
+        switch (month) {
+            case 1: document.writeln("Janeiro"); 
+            document.writeln("<br><br>");
+            break;
+
+            case 2: document.writeln("Fevereiro"); 
+            document.writeln("<br><br>");
+            break;
+
+            case 3: document.writeln("Março");
+            document.writeln("<br><br>");
+            break;
+            
+            case 4: document.writeln("Abril"); 
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outro mês");
+            document.writeln("<br><br>"); 
+            break;
+        }
+
+        let user = "admin";
+     
+        document.writeln("Questão 23:"); 
+
+        switch (user) {
+           case "admin": document.writeln("Tem controle total."); 
+           document.writeln("<br><br>");
+           break;
+
+           case "editor": document.writeln("Pode editar o conteúdo."); 
+           document.writeln("<br><br>");
+           break;
+
+           case "guest": document.writeln("Apenas visualiza o conteúdo."); 
+           document.writeln("<br><br>");
+           break;
+
+           default: document.writeln("Outra função");
+           document.writeln("<br><br>");
+           break;
+        }
+
+        let fruits = "maça";
+
+        document.writeln("Questão 24:");
+        
+        switch (fruits) {
+            case "banana": document.writeln("É rica em potássio.");
+            document.writeln("<br><br>");
+            break; 
+
+            case "maça": document.writeln("É rica em fibras.")
+            document.writeln("<br><br>");
+            break;
+
+            case "laranja": document.writeln("É super rica em vitamina C");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outra fruta");
+            document.writeln("<br><br>");
+            break;
+
+        }
+
+        let climate = "chuvoso";
+
+        document.writeln("Questão 25:");
+
+        switch (climate) {
+            case "ensolarado": document.writeln("Dia bom para sair.");
+            document.writeln("<br><br>");
+            break;
+
+            case "nublado": document.writeln("Dia bom para sair, mas talvez precise de um guarda-chuva.");
+            document.writeln("<br><br>");
+            break;
+
+            case "chuvoso": document.writeln("Dia bom para sair com guarda-chuva.");
+            document.writeln("<br><br>");
+            break;
+
+            case "nevoado": document.writeln("Dia bom para sair com um casaco quente.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outro clima.");
+            document.writeln("<br><br>");
+            break;
+        }
+
+        let notes = "A";
+
+        document.writeln("Questão 26:");
+
+        switch (notes) {
+            case "A": document.writeln("Nota Excelente.");
+            document.writeln("<br><br>");
+            break;
+
+            case "B": document.writeln("Nota Boa, mas dá pra melhorar.");
+            document.writeln("<br><br>");
+            break;
+
+            case "C": document.writeln("Você passou, mas é bom revisar o assunto.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outra nota.");
+            document.writeln("<br><br>");
+            break;
+        }
+
+        let option = 2;
+
+        document.writeln("Questão 27:");
+
+        switch(option) {
+            case 1: document.writeln ("Bem vindo a sua conta!!");
+            document.writeln("<br><br>");
+            break;
+
+            case 2: document.writeln("Bem vindo ao seu perfil.");
+            document.writeln("<br><br>");
+            break;
+
+            case 3: document.writeln("Você saiu da sua conta, Até logo!!.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Opção invalida.");
+            document.writeln("<br><br>");
+            break;
+        }
+
+        let vehicle = "moto";
+
+        document.writeln("Questão 28:");
+
+        switch (vehicle) {
+            case "Carro": document.writeln("Veiculo com 4 rodas.");
+            document.writeln("<br><br>");
+            break;
+
+            case "moto": document.writeln("Veiculo com 2 rodas");
+            document.writeln("<br><br>");
+            break;
+
+            case "Caminhão": document.writeln("Veiculo que transporta carga pesada.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outro veiculo.");
+            document.writeln("<br><br>");
+            break;
+        }
+
+        let payment = "pix";
+
+        document.writeln("Questão 29:");
+
+        switch(payment) {
+            case "dinheiro": document.writeln("Pagamento em dinheiro recebido.");
+            document.writeln("<br><br>");
+            break;
+
+            case "cartao": document.writeln("Pagamento no cartão recebido.");
+            document.writeln("<br><br>");
+            break;
+
+            case "pix": document.writeln("Pagamento no pix recebido.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outra forma de pagamento.")
+        }
+
+        let language = "JavaScript";
+
+        document.writeln("Questão 30:");
+
+        switch(language) {
+            case "JavaScript": document.writeln("Você está estudando JavaScript.");
+            document.writeln("<br><br>");
+            break;
+
+            case "Python": document.writeln("Você está estudando Python;")
+            document.writeln("<br><br>");
+            break;
+
+            case "C#": Document.writeln("Você está estudando C#.");
+            document.writeln("<br><br>");
+            break;
+
+            default: document.writeln("Outra Linguagem.");
+            document.writeln("<br><br>");
+            break;
+        }
+    </script>
+</body>
+</html>

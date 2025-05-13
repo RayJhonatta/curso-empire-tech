@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Painel de Filme Assistidos</title>
+</head>
+<body>
+    <main class="container">
+        <header class="header-container">
+            <div class="icons-container">
+                <p class="header-paragraph">
+                    <i class="material-icons">person</i>
+                Ray Jhonatta</p>
+                <a href="../login/index.html" class="link-header">
+                    <i class="material-icons">logout</i>
+                </a>    
+            </div>
+        </header>
+        <section>
+            <h1>Painel de Filmes Assistidos</h1>
+            <section class="edit-movie-container">
+                <div class="title-container">
+                    <h2>Adicionar / Editar Filme</h2>
+                    <hr style="border: 0.5px solid rgba(167, 167, 167, 0.476)">
+                </div>
+                <div class="field-edit-movie">
+                    <div class="field-line">
+                        <label for="title" class="label-edit-movie">Título:</label>
+                        <input type="text" name="title" id="title" class="input-edit-movie" placeholder="Adicione o nome do filme">
+                    </div>
+                    
+                    <div class="field-line">
+                        <label for="gender" class="label-edit-movie">Gênero:</label>
+                        <input type="text" name="gender" id="gender" class="input-edit-movie" placeholder="Adicione o gênero do filme">
+                    </div>
+                    
+                    <div class="field-line">
+                        <label for="year" class="label-edit-movie">Data:</label>
+                        <input type="number" name="year" id="year" class="input-edit-movie" placeholder="Adicione a data do filme">
+                    </div>
+                        <button type="submit" class="button-add-movie">Adicionar Filme</button>
+                </div>
+            </section>
+            <section class="filter-movie">
+                <div class="title-container">
+                    <h2>Filtrar Filmes</h2>
+                    <hr style="border: 0.5px solid rgba(167, 167, 167, 0.476)">
+                </div>
+                <div class="filter-movie-fields">
+                    <input type="text" name="title" id="title" class="fields-filter-movie" placeholder="Buscar por Titulo">
+                    <input type="text" name="gender" id="field-filter-movie" placeholder="Buscar por Gênero">
+                    <input type="number" name="year" id="year" class="fields-filter-movie" placeholder="Buscar por Data">
+                </div>
+            </section>
+            <section class="table-film-seen">
+                <div class="title-container">
+                    <h2>Filmes Assistidos</h2> 
+                    <hr style="border: 0.5px solid rgba(167, 167, 167, 0.476)">
+                </div>
+                <div class="table-data-movies">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Gênero</th>
+                                <th>Ano</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-table">
+                            <tr>
+                                <td class="title-data">Vingadores: Ultimato</td>
+                                <td class="data-table">Ficção Científica</td>
+                                <td class="data-table">2019</td>  
+                                <td class="data-table">
+                                    <a href="#" class="link-edit-table">
+                                        <i class="material-icons">edit</i>
+                                        Editar</a> 
+                                    <a href="#" class="link-delete-table">
+                                        <i class="material-icons">delete</i>
+                                    Deletar</a>   
+                                </td>                     
+                            </tr>
+                            <tr>
+                                <td class="title-data">Titanic</td>
+                                <td class="data-table">Drama</td>
+                                <td class="data-table">1997</td>
+                                <td class="data-table">
+                                    <a href="#" class="link-edit-table">
+                                        <i class="material-icons">edit</i>
+                                        Editar</a> 
+                                    <a href="#" class="link-delete-table">
+                                        <i class="material-icons">delete</i>
+                                    Deletar</a>   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title-data">Avatar</td>
+                                <td class="data-table">Ficção Científica</td>
+                                <td class="data-table">2009</td>
+                                <td class="data-table">
+                                    <a href="#" class="link-edit-table">
+                                        <i class="material-icons">edit</i>
+                                        Editar</a> 
+                                    <a href="#" class="link-delete-table">
+                                        <i class="material-icons">delete</i>
+                                    Deletar</a>   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title-data">Jurassic Park</td>
+                                <td class="data-table">Aventura</td>
+                                <td class="data-table">1993</td>
+                                <td class="data-table">
+                                    <a href="#" class="link-edit-table">
+                                        <i class="material-icons">edit</i>
+                                        Editar</a> 
+                                    <a href="#" class="link-delete-table">
+                                        <i class="material-icons">delete</i>
+                                        Deletar</a>   
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
