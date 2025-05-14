@@ -1,0 +1,67 @@
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {  /* CONFIGURAÇÕES PARA TABLET */
+    .container {
+        transition: width .3s, height .3s;
+        transition-timing-function: ease;
+        width: 90%;
+        height: 97%;
+    }
+
+    section > h1 {
+        font-size: 35px;
+    }
+
+    .edit-movie-container {
+        width: 98%;
+    }
+
+    .edit-movie-container > .title-container > h2 {
+        font-size: 21px;
+    } 
+
+    .field-edit-movie > .field-line > input[type=number] {
+        width: auto;
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .filter-movie {
+        width: 98%;
+    }
+
+    .filter-movie > .title-container > h2 {
+        font-size: 21px;
+    }
+
+    #field-filter-movie::placeholder {
+        font-size: 15px;
+    }
+
+    .fields-filter-movie::placeholder {
+        font-size: 15px;
+    }
+
+    .table-film-seen {
+        width: 98%;
+    }
+
+    .table-film-seen > .title-container > h2 {
+        font-size: 21px;
+    }
+
+    .table-data-movies > table > thead > tr > th {
+        font-size: 18px;
+    }
+
+    .tbody-table > tr > .title-data {
+        
+    }
+}
