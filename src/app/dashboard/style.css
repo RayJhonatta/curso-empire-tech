@@ -19,6 +19,8 @@ body {
     left: 51%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
 .header-container {
@@ -301,5 +303,5 @@ td:last-child {
 }
 
 .tr-last > td:last-child {
-    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;    
 }
