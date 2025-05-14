@@ -295,3 +295,11 @@ td:last-child {
 .link-delete-table > .material-icons:hover {
     color: red;
 }
+
+.tr-last > td:first-child {
+    border-bottom-left-radius: 3px;
+}
+
+.tr-last > td:last-child {
+    border-bottom-right-radius: 3px;
+}
