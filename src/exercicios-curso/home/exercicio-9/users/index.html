@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application: Users</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <header class="nav-header">
+        <div class="logo-container">
+            <img src="../img/logo-header-TLAUAEXS.png" alt="logo-da-empresa" class="logo">
+        </div>
+        <div class="div-links-container">
+            <nav class="nav-links">
+                <a href="../home/index.html" class="link">Home</a>
+                <a href="../products/index.html" class="link">Products</a>
+                <a href="../users/index.html" class="link visited">Users</a>
+                <a href="../clients/index.html" class="link">Clients</a>
+            </nav>
+        </div>
+</header>
+    <main class="main-container">
+        <section class="main-content-title">
+            <h1>Users</h1>
+        </section>
+
+        <section class="list-container">
+            <div class="list-filter default-container">
+                <h3 class="filter-title">Filter</h3>
+            <div class="filter-content">
+                <div class="filter-item">
+                    <label class="default-label" for="number">Id</label>
+                    <input class="default-input" type="number" name="number" id="number">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="name">Name</label>
+                    <input class="default-input" type="text" name="name" id="name">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="text">E-mail</label>
+                    <input class="default-input" type="text" name="text" id="text">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="text">Account Type</label>
+                    <input class="default-input" type="text" name="text" id="text">
+                </div>
+                <button type="submit" class="table-button">Enviar</button>
+            </div>
+
+            <table class="list-table default-container">
+                <thead>
+                    <tr class="table-row">
+                        <th class="table-head-item">ID</th>
+                        <th class="table-head-item">Name</th>
+                        <th class="table-head-item">E-mail</th>
+                        <th class="table-head-item">Account Type</th>
+                        <th class="table-head-item">Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td class="table-data">1</td>
+                        <td class="table-data">João da Silva</td>
+                        <td class="table-data">joao@gmail.com</td>
+                        <td class="table-data">Administrador</td>
+                        <td class="table-data">Editar</td>
+                    </tr>
+                    <tr>
+                        <td class="table-data">2</td>
+                        <td class="table-data">Maria Oliveira</td>
+                        <td class="table-data">maria@gmail.com</td>
+                        <td class="table-data">Comum</td>
+                        <td class="table-data">Editar</td>
+                    </tr>
+                    <tr>
+                        <td class="table-data">3</td>
+                        <td class="table-data">Pedro Almeida</td>
+                        <td class="table-data">pedro@gmail.com</td>
+                        <td class="table-data">Comum</td>
+                        <td class="table-data">Editar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+</body>
+</html>
