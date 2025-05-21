@@ -3,28 +3,50 @@ function ValidarLogin() {
     const password = document.getElementById("password").value;
 
     if (!email || !password) {
-        alert("Por favor, preencha os campos corretamente!");
+        Swal.fire ({
+            title: "Por favor, preencha os campos corretamente!!",
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+        });
         return;
     }
 
     if (!email.includes("@")) {
-        alert("Por favor, informe o @ no seu email!!");
+        Swal.fire ({
+            title: "Por favor, informe o @ no seu email!!",
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+        });
         return;
     }
 
     if (!email.includes("gmail.com")) {
-        alert("Por favor, informe o 'gmail.com' no seu email!!");
+        Swal.fire ({
+            title: "Por favor, informe o 'gmail.com' no seu email!!",
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+        });
         return;
     }
 
     if(password.length < 8) {
-        alert("A senha precisa de mais 8 caracteres!!");
+        Swal.fire ({
+            title: "A senha precisa de mais 8 caracteres!!",
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+        });
         return;
     }
 
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
 
-    alert("Login bem-sucedido!");
-    window.location.href = "../dashboard/dashboard.html";
+    Swal.fire ({
+        title: "Login bem-sucedido!",
+        icon: 'success',
+        confirmButtonText: 'Ok',
+        willClose: () => {
+            window.location.href = "../dashboard/dashboard.html";
+        } 
+    });
 }

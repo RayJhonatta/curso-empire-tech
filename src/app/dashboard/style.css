@@ -21,6 +21,7 @@ body {
     border-radius: 10px;
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    overflow-y: auto;
 }
 
 .header-container {
