@@ -84,7 +84,7 @@ Grandes telas: acima de 1200px
 @media screen and (min-width: 992px) { /* CONFIGURAÇÕES PARA DESKTOP */
     .container {
         transition: width .3s, height .3s;
-        transition-timing-function: ease;
+        transition-timing-function: ease-in;
         width: 95%;
     }
 
@@ -136,6 +136,11 @@ Grandes telas: acima de 1200px
 
     .table-data-movies > table > thead > tr > th {
         font-size: 19px;
+    }
+
+    .table-data-movies > table > thead > tr > .title-fourth {
+        padding-left: 20px;
+        text-align: center;
     }
 
     .link-edit-table > .material-icons,

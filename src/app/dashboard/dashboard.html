@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-query.css">
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="../../assets/img/favicon_io (1)/favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Painel de Filme Assistidos</title>
 </head>
 <body>
@@ -16,9 +18,9 @@
                 <p class="header-paragraph">
                     <i class="material-icons">person</i>
                 Ray Jhonatta</p>
-                <a href="../login/index.html" class="link-header">
-                    <i class="material-icons">logout</i>
-                </a>    
+                <span class="link-header">
+                    <i class="material-icons" onclick="BackToLoginScreen()">logout</i>
+                </span>    
             </div>
         </header>
         <section>
@@ -43,7 +45,7 @@
                         <label for="year" class="label-edit-movie">Data:</label>
                         <input type="number" name="year" id="year" class="input-edit-movie" placeholder="Adicione a data do filme">
                     </div>
-                        <button type="submit" class="button-add-movie">Adicionar Filme</button>
+                        <button type="submit" class="button-add-movie" onclick="AddDataToTheTable()">Adicionar Filme</button>
                 </div>
             </section>
             <section class="filter-movie">
@@ -63,7 +65,7 @@
                     <hr style="border: 0.5px solid rgba(167, 167, 167, 0.476)">
                 </div>
                 <div class="table-data-movies">
-                    <table>
+                    <table id="moviesTable">
                         <thead>
                             <tr>
                                 <th class="title-first">Titulo</th>
