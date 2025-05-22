@@ -28,6 +28,8 @@ function BackToLoginScreen() {
 
 // ========== LocalStorage ========== //
 
+// ==========  ======== //
+
 function AddDataToTheTable() {
     const title = document.getElementById("title").value;
     const gender = document.getElementById("gender").value;
