@@ -28,8 +28,6 @@ function BackToLoginScreen() {
 
 // ========== LocalStorage ========== //
 
-// ==========  ======== //
-
 function AddDataToTheTable() {
     const title = document.getElementById("title").value;
     const gender = document.getElementById("gender").value;
@@ -41,9 +39,47 @@ function AddDataToTheTable() {
             icon: "warning",
             confirmButtonText: "Ok"
         });
+        return;
     }
+
+    let tableBody = document.querySelector('.tbody-table');
+    let newRow = tableBody.insertRow();
+
+    let titleCell = newRow.insertCell();
+    titleCell.classList.add('title-data');
+    titleCell.textContent = title;
+
+    let genderCell = newRow.insertCell();
+    genderCell.classList.add('data-table');
+    genderCell.textContent = gender;
+
+    let yearCell = newRow.insertCell();
+    yearCell.classList.add('data-table');
+    yearCell.textContent = year;
+
+    let actionsCell = newRow.insertCell();
+    actionsCell.classList.add('data-table');
+    actionsCell.innerHTML = `
+        <a href="#" class="link-edit-table">
+            <i class="material-icons">edit</i>
+                Editar</a> 
+        <a href="#" class="link-delete-table">
+            <i class="material-icons">delete</i>
+                Deletar</a>   
+    `;
+
+    let movies = JSON.parse(localStorage.getItem('movies')) || [];
+    movies.push({title, gender, year});
+    localStorage.setItem('movies', JSON.stringify(movies));
 
     document.getElementById('title').value = '';
     document.getElementById('gender').value = '';
     document.getElementById('year').value = '';
 }
+
+
+function LoadMoviesFromLocalStorage() {
+    
+}
+
+// ==========  ======== //
