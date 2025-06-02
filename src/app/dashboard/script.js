@@ -76,39 +76,4 @@ function AddDataToTheTable() {
     document.getElementById('gender').value = '';
     document.getElementById('year').value = '';
 }
-
-
-function LoadMoviesFromLocalStorage() {
-    let movies = JSON.parse(localStorage.getItem('movies')) || [];
-    let tableBody = document.querySelector('.tbody-table');
-
-    movies.forEach((movie) => {
-        let newRow = tableBody.insertRow();
-
-        let titleCell = newRow.insertCell();
-        titleCell.classList.add('title-data');
-        titleCell.textContent = movie.title;
-
-        let genderCell = newRow.insertCell();
-        genderCell.classList.add('data-table');
-        genderCell.textContent = movie.gender;
-
-        let yearCell = newRow.insertCell();
-        yearCell.classList.add('data-table');
-        yearCell.textContent = movie.year;
-
-        let actionsCell = newRow.insertCell();
-        actionsCell.classList.add('data-table');
-        actionsCell.innerHTML = `
-            <a href="#" class="link-edit-table">
-                <i class="material-icons">edit</i>
-                Editar</a> 
-            <a href="#" class="link-delete-table">
-                <i class="material-icons">delete</i>
-                Deletar</a>   
-        `;
-    });
-}
-
-window.addEventListener('DOMContentLoaded', LoadMoviesFromLocalStorage);
 // ==========  ======== //
