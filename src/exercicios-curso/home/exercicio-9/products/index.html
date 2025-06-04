@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application: Products</title>
+    <script src="../products/product.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
             <div class="filter-content">
                 <div class="filter-item">
                     <label class="default-label" for="number">Code</label>
-                    <input class="default-input" type="number" name="number" id="number">
+                    <input class="default-input" type="number" name="code" id="code">
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="name">Name</label>
@@ -40,16 +41,16 @@
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="number">Price</label>
-                    <input class="default-input" type="number" name="number" id="number">
+                    <input class="default-input" type="number" name="price" id="price">
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="number">Amount</label>
-                    <input class="default-input" type="number" name="number" id="number">
+                    <input class="default-input" type="number" name="amount" id="amount">
                 </div>
-                <button type="submit" class="table-button">Enviar</button>
+                <button type="submit" class="table-button" onclick="create()">Enviar</button>
             </div>
 
-            <table class="list-table default-container">
+            <table class="list-table default-container" id="products-list">
                 <thead>
                     <tr class="table-row">
                         <th class="table-head-item">Code</th>
@@ -58,26 +59,7 @@
                         <th class="table-head-item">Amount</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="table-row">
-                        <td class="table-data">1012</td>
-                        <td class="table-data">Refrigerante</td>
-                        <td class="table-data">R$ 10,00</td>
-                        <td class="table-data">127</td>
-                    </tr>
-                    <tr>
-                        <td class="table-data">1242</td>
-                        <td class="table-data">Bolacha</td>
-                        <td class="table-data">R$ 6,00</td>
-                        <td class="table-data">200</td>
-                    </tr>
-                    <tr>
-                        <td class="table-data">1122</td>
-                        <td class="table-data">Salgado</td>
-                        <td class="table-data">R$ 7,00</td>
-                        <td class="table-data">220</td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
             </table>
         </section>
     </main>

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "code": 1,
+      "name": "Camiseta",
+      "price": 19.9,
+      "amount": 5,
+      "id": "25c9"
+    },
+    {
+      "code": 2,
+      "name": "Bermuda",
+      "price": 39.9,
+      "amount": 8,
+      "id": "d7b8"
+    },
+    {
+      "id": "dcd0",
+      "code": "3",
+      "name": "Boné",
+      "price": "20",
+      "amount": {}
+    },
+    {
+      "id": "07fd",
+      "code": "3",
+      "name": "Boné",
+      "price": "20",
+      "amount": {}
+    },
+    {
+      "id": "460b",
+      "code": "4",
+      "name": "Sapato",
+      "price": "100",
+      "amount": {}
+    },
+    {
+      "id": "28a6",
+      "code": "5",
+      "name": "Jaqueta ",
+      "price": "30",
+      "amount": "10"
+    }
+  ]
+}
