@@ -46,7 +46,7 @@ function AddDataToTheTable() {
     let newRow = table.insertRow();
 
     let titleCell = newRow.insertCell();
-    titleCell.classList.add("table-title");
+    titleCell.classList.add("title-data");
     titleCell.textContent = title;
 
     let genderCell = newRow.insertCell();
