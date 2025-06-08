@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application: Clients</title>
     <link rel="stylesheet" href="style.css">
+    <script src="../clients/script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -32,7 +33,7 @@
             <div class="filter-content">
                 <div class="filter-item">
                     <label class="default-label" for="number">Id</label>
-                    <input class="default-input" type="number" name="number" id="number">
+                    <input class="default-input" type="number" name="number" id="id">
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="name">Nome da Empresa</label>
@@ -40,20 +41,20 @@
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="text">Responsável</label>
-                    <input class="default-input" type="text" name="text" id="text">
+                    <input class="default-input" type="text" name="text" id="responsible">
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="text">E-mail do Contato</label>
-                    <input class="default-input" type="text" name="text" id="text">
+                    <input class="default-input" type="text" name="text" id="email">
                 </div>
                 <div class="filter-item">
                     <label class="default-label" for="text">Status</label>
-                    <input class="default-input" type="text" name="text" id="text">
+                    <input class="default-input" type="text" name="text" id="status">
                 </div>
-                <button type="submit" class="table-button">Enviar</button>
+                <button type="submit" class="table-button" onclick="createClient()">Enviar</button>
             </div>
 
-            <table class="list-table default-container">
+            <table class="list-table default-container" id="clients-list">
                 <thead>
                     <tr class="table-row">
                         <th class="table-head-item">ID</th>
