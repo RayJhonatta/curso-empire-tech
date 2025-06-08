@@ -42,22 +42,22 @@ function AddDataToTheTable() {
         return;
     }
 
-    let table = document.querySelector("tbody-table");
+    let table = document.querySelector(".tbody-table");
     let newRow = table.insertRow();
 
-    let titleCell = newRow.insertCell(0);
+    let titleCell = newRow.insertCell();
     titleCell.classList.add("table-title");
     titleCell.textContent = title;
 
-    let genderCell = newRow.insertCell(1);
+    let genderCell = newRow.insertCell();
     genderCell.classList.add("data-table");
     genderCell.textContent = gender;
 
-    let yearCell = newRow.insertCell(2);
+    let yearCell = newRow.insertCell();
     yearCell.classList.add("data-table");
     yearCell.textContent = year;
 
-    let actionsCell = newRow.insertCell(3);
+    let actionsCell = newRow.insertCell();
     actionsCell.classList.add("data-table");
     actionsCell.innerHTML = `
         <a href="#" class="link-edit-table">
