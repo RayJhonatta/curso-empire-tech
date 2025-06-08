@@ -42,73 +42,30 @@ function AddDataToTheTable() {
         return;
     }
 
-    let tableBody = document.querySelector('.tbody-table');
-    let newRow = tableBody.insertRow();
+    let table = document.querySelector("tbody-table");
+    let newRow = table.insertRow();
 
-    let titleCell = newRow.insertCell();
-    titleCell.classList.add('title-data');
+    let titleCell = newRow.insertCell(0);
+    titleCell.classList.add("table-title");
     titleCell.textContent = title;
 
-    let genderCell = newRow.insertCell();
-    genderCell.classList.add('data-table');
+    let genderCell = newRow.insertCell(1);
+    genderCell.classList.add("data-table");
     genderCell.textContent = gender;
 
-    let yearCell = newRow.insertCell();
-    yearCell.classList.add('data-table');
+    let yearCell = newRow.insertCell(2);
+    yearCell.classList.add("data-table");
     yearCell.textContent = year;
 
-    let actionsCell = newRow.insertCell();
-    actionsCell.classList.add('data-table');
+    let actionsCell = newRow.insertCell(3);
+    actionsCell.classList.add("data-table");
     actionsCell.innerHTML = `
         <a href="#" class="link-edit-table">
             <i class="material-icons">edit</i>
                 Editar</a> 
         <a href="#" class="link-delete-table">
             <i class="material-icons">delete</i>
-                Deletar</a>   
-    `;
-
-    let movies = JSON.parse(localStorage.getItem('movies')) || [];
-    movies.push({title, gender, year});
-    localStorage.setItem('movies', JSON.stringify(movies));
-
-    document.getElementById('title').value = '';
-    document.getElementById('gender').value = '';
-    document.getElementById('year').value = '';
+                Deletar</a>`;
 }
 
-
-function LoadMoviesFromLocalStorage() {
-    let movies = JSON.parse(localStorage.getItem('movies')) || [];
-    let tableBody = document.querySelector('.tbody-table');
-
-    movies.forEach((movie) => {
-        let newRow = tableBody.insertRow();
-
-        let titleCell = newRow.insertCell();
-        titleCell.classList.add('title-data');
-        titleCell.textContent = movie.title;
-
-        let genderCell = newRow.insertCell();
-        genderCell.classList.add('data-table');
-        genderCell.textContent = movie.gender;
-
-        let yearCell = newRow.insertCell();
-        yearCell.classList.add('data-table');
-        yearCell.textContent = movie.year;
-
-        let actionsCell = newRow.insertCell();
-        actionsCell.classList.add('data-table');
-        actionsCell.innerHTML = `
-            <a href="#" class="link-edit-table">
-                <i class="material-icons">edit</i>
-                Editar</a> 
-            <a href="#" class="link-delete-table">
-                <i class="material-icons">delete</i>
-                Deletar</a>   
-        `;
-    });
-}
-
-window.addEventListener('DOMContentLoaded', LoadMoviesFromLocalStorage);
 // ==========  ======== //
