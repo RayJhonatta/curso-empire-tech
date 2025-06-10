@@ -1,3 +1,17 @@
+window.onload = () =>  {
+    loadMovies();
+}
+
+const host = "http://localhost:3002";
+
+function loadMovies() {
+    fetch(`${host}/movies`)
+    .then(response => response.json()) 
+    .then(response => {
+        AddDataToTheTable(response);
+    });
+}
+
 function BackToLoginScreen() {
     Swal.fire({
         title: "Tem certeza?",
@@ -26,14 +40,45 @@ function BackToLoginScreen() {
     });
 }
 
-// ========== LocalStorage ========== //
+function AddDataToTheTable(movies) {
+    let table = document.querySelector(".tbody-table");
+    table.innerHTML = '';
 
-function AddDataToTheTable() {
-    const title = document.getElementById("title").value;
-    const gender = document.getElementById("gender").value;
-    const year = document.getElementById("year").value;
+    movies.forEach((movie) => {
+        let newRow = table.insertRow();
 
-    if(!title || !gender || !year) {
+        let titleCell = newRow.insertCell();
+        titleCell.classList.add("title-data");
+        titleCell.textContent = movie.title;
+
+        let genderCell = newRow.insertCell();
+        genderCell.classList.add("data-table");
+        genderCell.textContent = movie.gender;
+
+        let yearCell = newRow.insertCell();
+        yearCell.classList.add("data-table");
+        yearCell.textContent = movie.year;
+
+        let actionsCell = newRow.insertCell();
+        actionsCell.classList.add("data-table");
+        actionsCell.innerHTML = `
+            <a href="#" class="link-edit-table" data-id="${movie.id}">
+                <i class="material-icons">edit</i>
+                Editar
+            </a> 
+            <a href="#" class="link-delete-table" data-id="${movie.id}">
+                <i class="material-icons">delete</i>
+                Deletar
+            </a>`;
+    });
+}
+
+function createMovies() {
+    let titleField = document.getElementById('title').value;
+    let genderField = document.getElementById('gender').value;
+    let yearField = document.getElementById('year').value;
+
+    if(!titleField || !genderField || !yearField) {
         Swal.fire ({
             text: "Por favor, preencha todos os campos!!",
             icon: "warning",
@@ -42,30 +87,64 @@ function AddDataToTheTable() {
         return;
     }
 
-    let table = document.querySelector(".tbody-table");
-    let newRow = table.insertRow();
+    const movies = {
+        title: titleField,
+        gender: genderField,
+        year: yearField
+    };
 
-    let titleCell = newRow.insertCell();
-    titleCell.classList.add("title-data");
-    titleCell.textContent = title;
-
-    let genderCell = newRow.insertCell();
-    genderCell.classList.add("data-table");
-    genderCell.textContent = gender;
-
-    let yearCell = newRow.insertCell();
-    yearCell.classList.add("data-table");
-    yearCell.textContent = year;
-
-    let actionsCell = newRow.insertCell();
-    actionsCell.classList.add("data-table");
-    actionsCell.innerHTML = `
-        <a href="#" class="link-edit-table">
-            <i class="material-icons">edit</i>
-                Editar</a> 
-        <a href="#" class="link-delete-table">
-            <i class="material-icons">delete</i>
-                Deletar</a>`;
+    fetch(`${host}/movies`, {
+        method: 'POST',
+        body: JSON.stringify(movies),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if(response.ok) {
+            loadMovies();
+        }
+    })
+    .catch(error => {
+        console.log('Error', error);
+    });
 }
 
-// ==========  ======== //
+function updateMovies() {
+    Swal.fire({ 
+        title: "Tem certeza?",
+        text: "Você deseja atualizar os dados do filme?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sim",
+        cancelButtonText: "Não"
+    }).then(result => {
+        if (result.isConfirmed) {
+            let titleField = document.getElementById('title').value;
+            let genderField = document.getElementById('gender').value;
+        let yearField = document.getElementById('year').value;
+
+        const movies = {
+            title: titleField,
+            gender: genderField,
+            year: yearField
+        };
+
+        fetch(`${host}/movies${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(movies),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if(response.ok) {
+                loadMovies();
+            }
+        })
+        .catch(error => {
+            console.log('Error', error);
+        });
+            }
+        })
+}
