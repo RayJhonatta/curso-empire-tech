@@ -12,34 +12,6 @@ function loadMovies() {
     });
 }
 
-function BackToLoginScreen() {
-    Swal.fire({
-        title: "Tem certeza?",
-        text: "Você deseja retornar a tela de login?",
-        icon: "question",
-        showCancelButton: true,
-        confirmButtonText: "Sim",
-        cancelButtonText: "Não"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                title: "Ação realizada com sucesso!!",
-                icon: 'success',
-                confirmButtonText: 'Ok',
-                willClose: () => {
-                    window.location.href = "../login/index.html";
-                }
-            });
-        } else {
-            Swal.fire ({
-                title: "Ação cancelada!!",
-                icon: "error",
-                confirmButtonText: 'Ok'
-            });
-        } 
-    });
-}
-
 function AddDataToTheTable(movies) {
     let table = document.querySelector(".tbody-table");
     table.innerHTML = '';
@@ -110,7 +82,7 @@ function createMovies() {
     });
 }
 
-function updateMovies() {
+function updateMovies(id) {
     Swal.fire({ 
         title: "Tem certeza?",
         text: "Você deseja atualizar os dados do filme?",
@@ -122,7 +94,7 @@ function updateMovies() {
         if (result.isConfirmed) {
             let titleField = document.getElementById('title').value;
             let genderField = document.getElementById('gender').value;
-        let yearField = document.getElementById('year').value;
+            let yearField = document.getElementById('year').value;
 
         const movies = {
             title: titleField,
@@ -147,4 +119,32 @@ function updateMovies() {
         });
             }
         })
+} 
+
+function BackToLoginScreen() {
+    Swal.fire({
+        title: "Tem certeza?",
+        text: "Você deseja retornar a tela de login?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sim",
+        cancelButtonText: "Não"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Ação realizada com sucesso!!",
+                icon: 'success',
+                confirmButtonText: 'Ok',
+                willClose: () => {
+                    window.location.href = "../login/index.html";
+                }
+            });
+        } else {
+            Swal.fire ({
+                title: "Ação cancelada!!",
+                icon: "error",
+                confirmButtonText: 'Ok'
+            });
+        } 
+    });
 }
