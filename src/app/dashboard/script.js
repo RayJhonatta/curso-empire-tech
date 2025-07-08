@@ -43,6 +43,19 @@ function AddDataToTheTable(movies) {
                 Deletar
             </a>`;
     });
+        document.querySelectorAll('.link-edit-table').forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const id = link.getAttribute('data-id');
+                editMovies(id);
+            });
+        });
+        fetch(`${host}/movies/${id}`)
+
+        document.getElementById('title').value = movie.title;
+        document.getElementById("gender").value = movie.gender;
+        document.getElementById("year").value = movie.year;
+
 }
 
 function createMovies() {

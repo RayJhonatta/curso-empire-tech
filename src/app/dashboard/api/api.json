@@ -3,12 +3,26 @@
     {
       "title": "Vingadores: Ultimato",
       "gender": "Fição Científica",
-      "year": 2019
+      "year": 2019,
+      "id": "806c"
     },
     {
       "title": "Titanic",
       "gender": "Drama",
-      "year": 1997
+      "year": 1997,
+      "id": "93a5"
+    },
+    {
+      "id": "d86c",
+      "title": "Doutor Estranho",
+      "gender": "Ficção Científica",
+      "year": "2017"
+    },
+    {
+      "id": "cc44",
+      "title": "Doutor Estranho",
+      "gender": "Ficção Científica",
+      "year": "2017"
     }
   ]
 }
