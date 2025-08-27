@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application: Products</title>
+    <script src="../products/product.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header class="nav-header">
+        <div class="logo-container">
+            <img src="../img/logo-header-TLAUAEXS.png" alt="logo-da-empresa" class="logo">
+        </div>
+        <div class="div-links-container">
+            <nav class="nav-links">
+                <a href="../home/index.html" class="link">Home</a>
+                <a href="../products/index.html" class="link visited">Products</a>
+                <a href="../users/index.html" class="link">Users</a>
+                <a href="../clients/index.html" class="link">Clients</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main-container">
+        <section class="main-content-title">
+            <h1>Products</h1>
+        </section>
+
+        <section class="list-container">
+            <div class="list-filter default-container">
+                <h3 class="filter-title">Filter</h3>
+            <div class="filter-content">
+                <div class="filter-item">
+                    <label class="default-label" for="number">Code</label>
+                    <input class="default-input" type="number" name="code" id="code">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="name">Name</label>
+                    <input class="default-input" type="text" name="name" id="name">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="number">Price</label>
+                    <input class="default-input" type="number" name="price" id="price">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="number">Amount</label>
+                    <input class="default-input" type="number" name="amount" id="amount">
+                </div>
+                <button type="submit" class="table-button" onclick="create()">Enviar</button>
+            </div>
+
+            <table class="list-table default-container" id="products-list">
+                <thead>
+                    <tr class="table-row">
+                        <th class="table-head-item">Code</th>
+                        <th class="table-head-item">Name</th>
+                        <th class="table-head-item">Price</th>
+                        <th class="table-head-item">Amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+</body>
+</html>

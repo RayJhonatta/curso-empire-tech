@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application: Clients</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../clients/script.js"></script>
+</head>
+<body>
+    <div class="container">
+    <header class="nav-header">
+        <div class="logo-container">
+            <img src="../img/logo-header-TLAUAEXS.png" alt="logo-da-empresa" class="logo">
+        </div>
+        <div class="div-links-container">
+            <nav class="nav-links">
+                <a href="../home/index.html" class="link">Home</a>
+                <a href="../products/index.html" class="link">Products</a>
+                <a href="../users/index.html" class="link">Users</a>
+                <a href="../clients/index.html" class="link visited">Clients</a>
+            </nav>
+        </div>
+</header>
+    <main class="main-container">
+        <section class="main-content-title">
+            <h1>Clients</h1>
+        </section>
+
+        <section class="list-container">
+            <div class="list-filter default-container">
+                <h3 class="filter-title">Filter</h3>
+            <div class="filter-content">
+                <div class="filter-item">
+                    <label class="default-label" for="number">Id</label>
+                    <input class="default-input" type="number" name="number" id="id">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="name">Nome da Empresa</label>
+                    <input class="default-input" type="text" name="name" id="name">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="text">Responsável</label>
+                    <input class="default-input" type="text" name="text" id="responsible">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="text">E-mail do Contato</label>
+                    <input class="default-input" type="text" name="text" id="email">
+                </div>
+                <div class="filter-item">
+                    <label class="default-label" for="text">Status</label>
+                    <input class="default-input" type="text" name="text" id="status">
+                </div>
+                <button type="submit" class="table-button" onclick="createClient()">Enviar</button>
+            </div>
+
+            <table class="list-table default-container" id="clients-list">
+                <thead>
+                    <tr class="table-row">
+                        <th class="table-head-item">ID</th>
+                        <th class="table-head-item">Nome da Empresa</th>
+                        <th class="table-head-item">Responsável</th>
+                        <th class="table-head-item">E-mail do Contato</th>
+                        <th class="table-head-item">Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+</div>
+</body>
+</html>

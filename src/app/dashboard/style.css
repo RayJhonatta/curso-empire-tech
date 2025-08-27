@@ -19,6 +19,9 @@ body {
     left: 51%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    overflow-y: auto;
 }
 
 .header-container {
@@ -145,11 +148,13 @@ section > h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 7px;
 }
 
 .fields-filter-movie {
+    padding: 5px;
     width: 30%;
-    height: 26px;
+    height: 15px;
     border: 1px solid #555;
     border-radius: 3px;
     background-color: #333;
@@ -157,8 +162,9 @@ section > h1 {
 }
 
 #field-filter-movie {
+    padding: 5px;
     width: 30%;
-    height: 26px;
+    height: 15px;
     border: 1px solid #555;
     border-radius: 3px;
     background-color: #333;
@@ -167,13 +173,11 @@ section > h1 {
 
 #field-filter-movie::placeholder {
     font-size: 11px;
-    padding-left: 5px;
     color: #aaa;
 }
 
 .fields-filter-movie::placeholder {
     font-size: 11px;
-    padding-left: 5px;
     color: #aaa;
 }
 
@@ -301,5 +305,5 @@ td:last-child {
 }
 
 .tr-last > td:last-child {
-    border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;    
 }

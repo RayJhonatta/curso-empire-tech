@@ -202,9 +202,9 @@ Grandes telas: acima de 1200px
         background: url(../../assets/img/shutterstock_1966720738_Easy-Resize.com.png);
         float: left;
         width: 50%;
-        height: 75vh;
+        height: 72.4vh;
         display: block;
-        border-top-right-radius: 1px;
+        border-top-right-radius: 0px;
         border-bottom-left-radius: 20px;
         background-size: cover;
         background-position: center;
@@ -306,8 +306,8 @@ Grandes telas: acima de 1200px
         display: block;
         float: right;
         width: 50%;
-        height: 668px;
-        border-top-left-radius: 1px;
+        height: 670px;
+        border-top-left-radius: 0px;
         border-bottom-right-radius: 20px;
     }
 

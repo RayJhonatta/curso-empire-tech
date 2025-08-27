@@ -1,0 +1,160 @@
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {  /* CONFIGURAÇÕES PARA TABLET */
+    .container {
+        transition: width .3s, height .3s;
+        transition-timing-function: ease;
+        width: 90%;
+        height: 97%;
+    }
+
+    .header-paragraph {
+        font-size: 25px;    
+    }
+
+    section > h1 {
+        font-size: 35px;
+    }
+
+    .edit-movie-container {
+        width: 98%;
+    }
+
+    .edit-movie-container > .title-container > h2 {
+        font-size: 21px;
+    } 
+
+    .field-edit-movie > .field-line > input[type=number] {
+        width: auto;
+        flex: 1;
+        margin-right: 0;
+    }
+
+    .filter-movie {
+        width: 98%;
+    }
+
+    .filter-movie > .title-container > h2 {
+        font-size: 21px;
+    }
+
+    #field-filter-movie::placeholder {
+        font-size: 15px;
+    }
+
+    .fields-filter-movie::placeholder {
+        font-size: 15px;
+    }
+
+    .table-film-seen {
+        width: 98%;
+    }
+
+    .table-film-seen > .title-container > h2 {
+        font-size: 21px;
+    }
+
+    .table-data-movies > table > thead > tr > th {
+        font-size: 18px;
+    }
+
+    .link-edit-table > .material-icons,
+    .link-delete-table > .material-icons {
+        font-size: 24px;
+        padding-bottom: 5px;
+    }
+
+    .table-data-movies a.link-edit-table,
+    .table-data-movies a.link-delete-table {
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+@media screen and (min-width: 992px) { /* CONFIGURAÇÕES PARA DESKTOP */
+    .container {
+        transition: width .3s, height .3s;
+        transition-timing-function: ease-in;
+        width: 95%;
+    }
+
+    .header-paragraph {
+        font-size: 26px;
+    } 
+
+    section > h1 {
+        font-size: 36px;
+    }
+
+    .edit-movie-container {
+        width: 98%;
+    } 
+
+    .edit-movie-container > .title-container > h2 {
+        font-size: 22px;
+    }
+
+    .field-edit-movie > .field-line > input[type=number] {
+        width: auto;
+        flex: 1;
+        margin-right: 0;
+    }
+    
+    .filter-movie {
+        width: 98%;
+    }
+
+    .filter-movie > .title-container > h2 {
+        font-size: 22px;
+    }
+
+    #field-filter-movie::placeholder {
+        font-size: 16px;
+    }
+
+    .fields-filter-movie::placeholder {
+        font-size: 16px;
+    }
+
+    .table-film-seen {
+        width: 98%;
+    }
+
+    .table-film-seen > .title-container > h2 {
+        font-size: 22px;
+    }
+
+    .table-data-movies > table > thead > tr > th {
+        font-size: 19px;
+    }
+
+    .table-data-movies > table > thead > tr > .title-fourth {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .link-edit-table > .material-icons,
+    .link-delete-table > .material-icons {
+        font-size: 25px;
+        padding-bottom: 5px;
+    }
+
+    .table-data-movies a.link-edit-table,
+    .table-data-movies a.link-delete-table {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}
